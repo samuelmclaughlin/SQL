@@ -12,3 +12,6 @@ SELECT
 	Email AS EMAIL
 FROM
 	Customer
+ORDER BY
+	FirstName ASC,
+	LastName DESC
