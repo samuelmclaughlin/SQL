@@ -16,6 +16,6 @@ SELECT
 FROM
 	Invoice
 WHERE 
-	total = 1.98
+	total IN(1.98,3.96)
 ORDER BY
 	InvoiceDate
