@@ -1,1 +1,1 @@
-# SQL Learning (MySQL + SQLite)
+# SQL Learning
