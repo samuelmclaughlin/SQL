@@ -16,6 +16,6 @@ SELECT
 FROM
 	Invoice
 WHERE 
-	total IN(1.98,3.96)
+	BillingCity IN ('Brussels', 'Orlando', 'Paris')
 ORDER BY
 	InvoiceDate
