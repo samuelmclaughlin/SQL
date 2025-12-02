@@ -7,7 +7,7 @@ Description: This query displays all customers first, last, and email addresses.
 */
 
 SELECT
-	FirstName,
+	FirstName AS [Customer First Name],
 	LastName,
 	Email
 FROM
