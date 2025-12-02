@@ -1,12 +1,10 @@
 /*
-How many customers purchased two songs at $0.99 each?
-*/
-
-/*
 Created by: Samuel McLaughlin
 Create date: 12/01/2025
-Description: Customers who purchased two songs at $0.99 each
+Description: How many invoices were billed in cities that started with B?
 */
+
+-- % I don't care what comes next
 
 SELECT 
 	InvoiceDate,
@@ -16,6 +14,6 @@ SELECT
 FROM
 	Invoice
 WHERE 
-	BillingCity IN ('Brussels', 'Orlando', 'Paris')
+	BillingCity LIKE '%B%'
 ORDER BY
 	InvoiceDate
