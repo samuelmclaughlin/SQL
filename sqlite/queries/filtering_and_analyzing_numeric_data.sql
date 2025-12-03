@@ -1,7 +1,7 @@
 /*
 Created by: Samuel McLaughlin
 Create date: 12/01/2025
-Description: How many invoices were billed on 2010-05-22 00:00:00
+Description: Music sales goal
 */
 
 
@@ -9,10 +9,16 @@ SELECT
 	InvoiceDate,
 	BillingAddress,
 	BillingCity,
-	total
+	total,
+	CASE
+		WHEN total < 2.00 THEN "Baseline Purchase"
+		WHEN total BETWEEN 2.00 AND 6.99 THEN "Low Purchase"
+		WHEN total BETWEEN 7.00 AND 15.00 THEN "Target Purchase"
+		ELSE "Top Performer"
+	END AS PurchaseType	
 FROM
 	Invoice
-WHERE 
-	total > 1.98 AND (BillingCity LIKE 'P%' OR BillingCity LIKE 'D%')
+WHERE
+	PurchaseType = "Top Performer"
 ORDER BY
-	InvoiceDate
+	BillingCity
