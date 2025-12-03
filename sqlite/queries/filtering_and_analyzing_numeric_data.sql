@@ -13,6 +13,6 @@ SELECT
 FROM
 	Invoice
 WHERE 
-	DATE(InvoiceDate) = '2010-05-22'
+	DATE(InvoiceDate) > '2010-05-22' AND total < 3.00
 ORDER BY
 	InvoiceDate
